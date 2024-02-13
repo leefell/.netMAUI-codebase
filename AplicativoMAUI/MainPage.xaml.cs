@@ -2,18 +2,22 @@
 {
     public partial class MainPage : ContentPage
     {
+        string nomeUsuario, idadeUsuario;
         public MainPage()
         {
             InitializeComponent();
         }
-        private void BTNOla_Clicked(object sender, EventArgs e)
+        private async void BTNOla_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("ALERTA", "Olá Mundo! \nVocê está vendo essa notificação!", "Fechar");
+            nomeUsuario = await DisplayPromptAsync("Nome", "Digite seu nome:", "Ok");
+            await DisplayAlert("ALERTA", "Olá " + nomeUsuario + "!" +
+                "\nVocê está vendo essa notificação às: " + DateTime.Now.ToString(), "Fechar");
         }
 
-        private void BTNBrincadeira_Clicked(object sender, EventArgs e)
+        private async void BTNIdade_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Horário Atual: ", DateTime.Now.ToString(), "Fechar");
+            idadeUsuario = await DisplayPromptAsync("Sua Idade", "Digite sua idade: ", "Ok");
+            await DisplayAlert("Saudações", "Você tem: " + idadeUsuario + " anos.", "Fechar");
         }
     }
 }
