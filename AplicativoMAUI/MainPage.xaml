@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicativoMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Label 
+                Text="Este é meu primeiro aplicativo!" FontSize="Header" HorizontalOptions="Center" Padding="10"/>
+
+            <Button x:Name="BTNOla"
+                Text="Clique aqui!" HorizontalOptions="Center" Clicked="BTNOla_Clicked" Padding="10"/>
+
+            <Button x:Name="BTNBrincadeira"
+                    Text="Aqui também!" HorizontalOptions="Center" Clicked="BTNBrincadeira_Clicked" Padding="10"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
