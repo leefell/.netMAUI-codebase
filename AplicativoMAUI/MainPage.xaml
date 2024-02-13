@@ -1,17 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<!--A tabbedPage comporta contentPages dentro dela, cada contentpage dentro dessa tabbedpage é uma aba-->
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AplicativoMAUI.MainPage">
+             x:Class="AplicativoMAUI.MainPage"
+            UnselectedTabColor="LightGray"
+            SelectedTabColor="MediumPurple"
+            BarBackgroundColor="#333333">
+    
+    <!--Esse vai ser o título da aba 1-->
+    <ContentPage Title="Saudação" IconImageSource="dotnet_bot">
 
-    <ScrollView>
-        <VerticalStackLayout Margin="20">
-            <Label 
-                Text="Este é meu primeiro aplicativo!" FontSize="Header" HorizontalOptions="Center" Padding="10"/>
+        <ScrollView>
+            <VerticalStackLayout Margin="20">
+                <Label 
+                    Text="Este é meu primeiro aplicativo!" FontSize="Header" HorizontalOptions="Center" Padding="10"/>
 
-            <Button x:Name="BTNOla"
-                Text="Clique aqui!" HorizontalOptions="Center" Clicked="BTNOla_Clicked" Padding="10"
-                    Margin="0, 10, 0, 0"/>
-        </VerticalStackLayout>
-    </ScrollView>
+                <Button x:Name="BTNOla"
+                    Text="Clique aqui!" HorizontalOptions="Center" Clicked="BTNOla_Clicked" Padding="10"
+                    Margin="0, 10, 0, 10"/>
+            </VerticalStackLayout>
+        </ScrollView>
 
-</ContentPage>
+    </ContentPage>
+
+    <!--Aba 2-->
+    <ContentPage Title="Grid" IconImageSource="dotnet_bot">
+        <ScrollView>
+            <VerticalStackLayout Margin="20">
+                <Label 
+                    Text="Página de GRID" FontSize="Header" HorizontalOptions="Center" Padding="10"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <!--Aba 3-->
+    <ContentPage Title="Navegação" IconImageSource="dotnet_bot">
+        <ScrollView>
+            <VerticalStackLayout Margin="20">
+                <Label 
+                    Text="Página de Navegação" FontSize="Header" HorizontalOptions="Center" Padding="10"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
