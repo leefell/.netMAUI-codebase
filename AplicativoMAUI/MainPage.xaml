@@ -26,19 +26,20 @@
     <!--Aba 2-->
     <ContentPage Title="Video" IconImageSource="dotnet_bot">
         <ScrollView>
-            <VerticalStackLayout Margin="20">
-                
+            <VerticalStackLayout Margin="0">
+
                 <!--Componente do android que permite abrir coisas externas-->
                 <WebView
                     x:Name="WVVideo"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
+                    BackgroundColor="#333333"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
                     Scale="0.75"
                     WidthRequest="500"
-                    HeightRequest="280"/>
+                    HeightRequest="300"/>
                 <!-- ^^^^ Configurações de escala e alinhamento-->
-                    
-            </VerticalStackLayout>'
+
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage>
 

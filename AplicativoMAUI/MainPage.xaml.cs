@@ -6,11 +6,12 @@
         {
             InitializeComponent();
 
-            string endereco = @"<iframe width=""560"" height=""315"" src=""https://www.youtube.com/embed/_QmyeFfiZaU?si=f0NRafxZ0QxO8r8Q"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" allowfullscreen></iframe>";
+            string endereco = @"<iframe width=""100%"" height=""100%"" src=""https://www.youtube.com/embed/_QmyeFfiZaU?si=f0NRafxZ0QxO8r8Q"" title=""YouTube video player"" frameborder=""0"" allow=""accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"" allowfullscreen></iframe>";
             WVVideo.Source = new HtmlWebViewSource
             {
                 Html = endereco
             };
+
         }
         private async void BTNOla_Clicked(object sender, EventArgs e)
         {
