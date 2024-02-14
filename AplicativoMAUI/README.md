@@ -1,0 +1,1 @@
+# Esse diretório contém um protótipo que eu fiz vendo o básico do .Net MAUI.
