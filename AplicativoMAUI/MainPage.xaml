@@ -24,20 +24,21 @@
     </ContentPage>
 
     <!--Aba 2-->
-    <ContentPage Title="Grid" IconImageSource="dotnet_bot">
+    <ContentPage Title="Video" IconImageSource="dotnet_bot">
         <ScrollView>
             <VerticalStackLayout Margin="20">
                 
                 <!--Componente do android que permite abrir coisas externas-->
                 <WebView
-                    Source="https://www.youtube.com/embed/_QmyeFfiZaU?si=Su3csgrqHtcPDcer"
+                    x:Name="WVVideo"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Scale="0.75"
                     WidthRequest="500"
                     HeightRequest="280"/>
                 <!-- ^^^^ Configurações de escala e alinhamento-->
-            </VerticalStackLayout>
+                    
+            </VerticalStackLayout>'
         </ScrollView>
     </ContentPage>
 
