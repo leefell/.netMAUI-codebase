@@ -40,9 +40,14 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" TintColor="#FFFFFF" />
-		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
-		<MauiIcon Include="Resources\AppIcon\appicon_android_fg.svg" />
+		<MauiIcon Include="Resources\AppIcon\*" />
+
+		<!-- Android App Icon -->
+		<MauiIcon Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'"
+				  Update="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon_android_fg.svg" TintColor="#FFFFFF" />
+
+		<!-- Other Platform App Icon -->
+		<MauiIcon Update="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" TintColor="#FFFFFF" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
