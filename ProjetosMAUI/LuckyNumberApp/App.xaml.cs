@@ -6,7 +6,8 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //CurrentPage = Página atual
+            MainPage = new MainPage();
         }
     }
 }
