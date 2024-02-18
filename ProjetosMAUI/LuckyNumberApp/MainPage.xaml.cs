@@ -6,4 +6,9 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	private void OnGenerateLuckyNumbers(object sender, EventArgs e)
+	{
+		NameApp.IsVisible = false; // essa label vai ficar invisivel
+		ContainerLuckyNumbers.IsVisible = true;
+	}
 }
