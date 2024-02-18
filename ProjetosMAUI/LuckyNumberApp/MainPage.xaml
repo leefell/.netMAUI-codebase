@@ -3,16 +3,18 @@
     x:Class="LuckyNumberApp.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="MainPage"
-    BackgroundColor="Green">
-    <VerticalStackLayout Margin="50" BackgroundColor="Blue">
+    Title="MainPage">
+    <VerticalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Image
+            HeightRequest="115"
+            Source="logo_green.png"
+            WidthRequest="74" />
         <Label
-            Margin="30"
-            Padding="30,20"
-            BackgroundColor="White"
+            Margin="0,20,0,120"
             HorizontalOptions="Center"
-            Text="OI EU SOU UMA MENSAGEM DO XAML HOT LOAD"
-            TextColor="Black"
+            Text="Número da Sorte"
+            TextColor="#00AB37"
             VerticalOptions="Center" />
+        <Button HorizontalOptions="Center" Text="Gerar número da sorte" />
     </VerticalStackLayout>
 </ContentPage>
