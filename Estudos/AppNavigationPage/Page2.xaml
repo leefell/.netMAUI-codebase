@@ -10,5 +10,13 @@
             HorizontalOptions="Center"
             Text="Página 2"
             VerticalOptions="Center" />
+        <Button
+            Clicked="OnButtonNextClicked"
+            HorizontalOptions="End"
+            Text="Prosseguir" />
+        <Button
+            Clicked="OnButtonPreviousClicked"
+            HorizontalOptions="Start"
+            Text="Anterior" />
     </VerticalStackLayout>
 </ContentPage>
