@@ -4,12 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Menu">
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="#333333">
         <Label
-            BackgroundColor="LightGray"
             FontSize="48"
             HorizontalOptions="Center"
             Text="Menu"
+            TextColor="White"
             VerticalOptions="Center" />
+
+        <Button
+            BackgroundColor="Transparent"
+            Clicked="OnButtonClickedPage1"
+            Text="Página 1"
+            TextColor="LightGray" />
+        <Button
+            BackgroundColor="Transparent"
+            Clicked="OnButtonClickedPage2"
+            Text="Página 2"
+            TextColor="LightGray" />
+        <Button
+            BackgroundColor="Transparent"
+            Clicked="OnButtonClickedPage3"
+            Text="Página 3"
+            TextColor="LightGray" />
     </VerticalStackLayout>
 </ContentPage>
