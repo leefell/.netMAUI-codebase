@@ -15,8 +15,14 @@
             Text="MAUI - Gallery"
             VerticalOptions="Center" />
 
-        <Label Text="Ínicio" />
+        <Label Text="Ínicio">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapInicio" />
+            </Label.GestureRecognizers>
+        </Label>
+
         <Label Text="Extra" />
+
         <Label Margin="0,0,0,10" Text="Créditos" />
 
         <VerticalStackLayout x:Name="MenuContainer" Margin="0,10,0,0" />
