@@ -4,8 +4,37 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="StackLayoutPage">
-    <StackLayout Orientation="Vertical">
-        <Label Text="StackLayout põe um elemento abaixo do outro! E admite qualquer outro layoout dentro dele!" />
+    <StackLayout
+        Margin="20"
+        Padding="20"
+        Orientation="Vertical"
+        Spacing="10">
+
+        <Label Text="StackLayout põe um elemento abaixo do outro! E admite qualquer outro layout dentro dele!" />
+
+
+        <StackLayout
+            Padding="20"
+            BackgroundColor="AliceBlue"
+            Orientation="Horizontal"
+            Spacing="10">
+            <!--  Distancia horizontal  -->
+
+            <Button HorizontalOptions="Start" Text="Olá Mundo!" />
+            <Button HorizontalOptions="End" Text="Olá Mundo 2!" />
+        </StackLayout>
+
+        <!--  Entretanto é melhor usar  -->
+
+        <VerticalStackLayout BackgroundColor="Aquamarine">
+            <Label Text="Label 1" />
+            <Label Text="Label 2" />
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout BackgroundColor="MediumAquamarine">
+            <Label Text="Label 3" />
+            <Label Text="Label 4" />
+        </HorizontalStackLayout>
 
         <Button
             HeightRequest="100"
@@ -13,11 +42,5 @@
             Text="Olá Mundo!"
             WidthRequest="200" />
 
-        <StackLayout BackgroundColor="Maroon" Orientation="Horizontal">
-
-            <Button HorizontalOptions="Start" Text="Olá Mundo!" />
-            <Button HorizontalOptions="End" Text="Olá Mundo!" />
-
-        </StackLayout>
     </StackLayout>
 </ContentPage>
