@@ -58,6 +58,7 @@
             VerticalOptions="Center" />
 
         <BoxView Grid.Row="1" Color="Orange" />
+
         <BoxView
             Grid.Row="1"
             Grid.Column="1"
@@ -68,7 +69,6 @@
             Grid.ColumnSpan="4"
             HeightRequest="10"
             Color="Black" />
-
 
     </Grid>
 </ContentPage>

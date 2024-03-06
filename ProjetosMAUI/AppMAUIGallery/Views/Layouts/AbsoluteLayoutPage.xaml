@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGallery.Views.Layouts.AbsoluteLayoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AbsoluteLayoutPage">
+    <AbsoluteLayout BackgroundColor="AliceBlue">
+        <!--  AbsoluteLayout.LayoutBounds="distanciaMargemEsquerda, DistanciaMargemSuperior, largura, altura"  -->
+        <Label
+            AbsoluteLayout.LayoutBounds="150,0,100,40"
+            BackgroundColor="LightGray"
+            Text="Oi! Sou uma label exemplo" />
+
+        <Label
+            Padding="15"
+            AbsoluteLayout.LayoutBounds="0.5, 500, 120, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="LightBlue"
+            Text="Cores bonitas"
+            TextColor="black"
+            TextDecorations="Underline" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="150, 200"
+            HeightRequest="50"
+            WidthRequest="50"
+            Color="Red" />
+
+        <BoxView AbsoluteLayout.LayoutBounds="175,225,50,50" Color="Aqua" />
+        <BoxView AbsoluteLayout.LayoutBounds="200,250,50,50" Color="Black" />
+        <BoxView AbsoluteLayout.LayoutBounds="225, 275, 50, 50" Color="Yellow" />
+        <BoxView AbsoluteLayout.LayoutBounds="250, 300, 50, 50" Color="Chocolate" />
+        <BoxView AbsoluteLayout.LayoutBounds="225, 325, 50, 50" Color="Green" />
+        <BoxView AbsoluteLayout.LayoutBounds="200, 350, 50,50" Color="Purple" />
+        <BoxView AbsoluteLayout.LayoutBounds="175, 375, 50,50" Color="Indigo" />
+        <BoxView AbsoluteLayout.LayoutBounds="150, 400, 50,50" Color="Maroon" />
+
+    </AbsoluteLayout>
+</ContentPage>
