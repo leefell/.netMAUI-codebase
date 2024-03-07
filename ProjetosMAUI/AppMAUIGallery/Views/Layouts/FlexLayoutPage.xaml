@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="FlexLayoutPage">
-    <FlexLayout Direction="Column">
+    <FlexLayout AlignItems="Start" Direction="Column">
 
         <Label
             Padding="10"
@@ -14,12 +14,22 @@
         <Label
             Padding="10"
             Background="DeepSkyBlue"
+            FlexLayout.AlignSelf="Center"
             Text="Linha 2" />
 
         <Label
             Padding="10"
             Background="CadetBlue"
+            FlexLayout.AlignSelf="End"
             Text="Linha 3" />
+
+        <Label
+            Margin="0,10,0,0"
+            Padding="10"
+            Background="BlanchedAlmond"
+            CharacterSpacing="2"
+            FlexLayout.AlignSelf="Stretch"
+            Text="Essa linha esta com a propriedade Stretch" />
 
     </FlexLayout>
 </ContentPage>
