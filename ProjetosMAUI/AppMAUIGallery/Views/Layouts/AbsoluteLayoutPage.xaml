@@ -14,7 +14,7 @@
         <Label
             Padding="15"
             AbsoluteLayout.LayoutBounds="0.5, 500, 120, 50"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutFlags="XProportional"
             BackgroundColor="LightBlue"
             Text="Cores bonitas"
             TextColor="black"
