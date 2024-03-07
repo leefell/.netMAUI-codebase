@@ -7,23 +7,28 @@
     <FlexLayout
         AlignItems="Start"
         Direction="Column"
-        JustifyContent="SpaceAround">
+        JustifyContent="Start">
 
         <Label
             Padding="10"
             Background="BlueViolet"
-            Text="Linha 1" />
+            FlexLayout.Grow="1"
+            FlexLayout.Order="1"
+            Text="Grow e Order" />
 
         <Label
             Padding="10"
             Background="DeepSkyBlue"
             FlexLayout.AlignSelf="Center"
+            FlexLayout.Basis="20%"
+            FlexLayout.Order="2"
             Text="Linha 2" />
 
         <Label
             Padding="10"
             Background="CadetBlue"
             FlexLayout.AlignSelf="End"
+            FlexLayout.Order="3"
             Text="Linha 3" />
 
         <Label
@@ -32,7 +37,15 @@
             Background="BlanchedAlmond"
             CharacterSpacing="2"
             FlexLayout.AlignSelf="Stretch"
-            Text="Essa linha esta com a propriedade Stretch" />
+            FlexLayout.Grow="1"
+            FlexLayout.Order="4"
+            Text="Essa linha esta com a propriedade Stretch e a Grow" />
+
+        <Label
+            Padding="10"
+            Background="Aquamarine"
+            FlexLayout.Shrink="0"
+            Text="Linha 5" />
 
     </FlexLayout>
 </ContentPage>
