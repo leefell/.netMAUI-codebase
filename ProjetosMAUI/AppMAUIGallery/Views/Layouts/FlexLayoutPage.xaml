@@ -5,47 +5,47 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="FlexLayoutPage">
     <FlexLayout
+        AlignContent="SpaceEvenly"
         AlignItems="Start"
-        Direction="Column"
-        JustifyContent="Start">
+        BackgroundColor="White"
+        Direction="Row"
+        JustifyContent="Start"
+        Wrap="Wrap">
 
         <Label
             Padding="10"
             Background="BlueViolet"
             FlexLayout.Grow="1"
             FlexLayout.Order="1"
-            Text="Grow e Order" />
+            Text="Esta linha mostra Grow e Order, onde este rótulo expande para preencher o espaço disponível." />
 
         <Label
             Padding="10"
             Background="DeepSkyBlue"
-            FlexLayout.AlignSelf="Center"
             FlexLayout.Basis="20%"
             FlexLayout.Order="2"
-            Text="Linha 2" />
+            Text="Esta linha tem uma largura base de 20% da largura total." />
 
         <Label
             Padding="10"
             Background="CadetBlue"
-            FlexLayout.AlignSelf="End"
             FlexLayout.Order="3"
-            Text="Linha 3" />
+            Text="Esta linha é posicionada conforme a ordem definida, mas não tem outros ajustes." />
 
         <Label
             Margin="0,10,0,0"
             Padding="10"
             Background="BlanchedAlmond"
             CharacterSpacing="2"
-            FlexLayout.AlignSelf="Stretch"
             FlexLayout.Grow="1"
             FlexLayout.Order="4"
-            Text="Essa linha esta com a propriedade Stretch e a Grow" />
+            Text="Esta linha tem Grow e Stretch, expandindo para preencher o espaço e esticando para a altura total disponível." />
 
         <Label
             Padding="10"
             Background="Aquamarine"
             FlexLayout.Shrink="0"
-            Text="Linha 5" />
+            Text="Esta linha não é permitida a encolher, mesmo se necessário para caber o conteúdo." />
 
     </FlexLayout>
 </ContentPage>
