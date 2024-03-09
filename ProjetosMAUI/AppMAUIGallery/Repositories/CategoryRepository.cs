@@ -18,7 +18,7 @@ namespace AppMAUIGallery.Repositories
             List<Category> categories = new List<Category>();
             categories.Add(new Category
             {
-                Name = "Layout",
+                Name = "Layouts",
                 Components = new List<Component> {
                     new Component {
                     Title = "StackLayout",
@@ -61,6 +61,12 @@ namespace AppMAUIGallery.Repositories
                         Title = "Label",
                         Description = "Apresenta um texto na tela.",
                         Page = typeof(LabelPage)
+                    },
+                    new Component
+                    {
+                        Title = "Button",
+                        Description = "Apresenta um botão na tela.",
+                        Page = typeof(ButtonPage)
                     }
                 }
             });
