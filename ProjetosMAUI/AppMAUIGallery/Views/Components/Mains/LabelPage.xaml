@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGallery.Views.Components.Mains.LabelPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LabelPage">
+    <VerticalStackLayout>
+
+        <Label
+            Padding="20"
+            BackgroundColor="DarkRed"
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="TEXT Padrão"
+            TextColor="Black" />
+
+        <Label
+            Padding="5,10"
+            FontAttributes="Italic"
+            FontFamily="Ojuju"
+            FontSize="20"
+            Text="Bem vindo à Página de Label!"
+            TextColor="White" />
+
+        <Label
+            Padding="5,10"
+            Text="EXEMPLO: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            TextColor="Red"
+            TextDecorations="Underline"
+            TextTransform="Default" />
+
+        <Label
+            LineBreakMode="CharacterWrap"
+            LineHeight="1"
+            MaxLines="3"
+            Text="Paragrafo:  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+        <Label Padding="10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span
+                        FontAttributes="Bold"
+                        Text="Lorem Ipsum"
+                        TextColor="Blue" />
+                    <Span FontAttributes="Italic" Text=" is simply a dummy text of the printing and typesetting" />
+                    <Span FontAttributes="Bold" Text=" O Span deixa customizar cada linha de uma maneira diferente! " />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label
+            Margin="0,10"
+            Padding="10"
+            BackgroundColor="DarkSlateGray"
+            Text="Isso é uma label clicavel!">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ClickGestureRecognizer_Clicked" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Label
+            Margin="0,10"
+            Padding="20"
+            BackgroundColor="#F2F2F2"
+            FontAttributes="Bold"
+            HeightRequest="100"
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="Alinhamento de Texto"
+            TextColor="Black"
+            VerticalTextAlignment="Center" />
+
+        <Label
+            Margin="0,20,0,0"
+            Padding="20"
+            BackgroundColor="LightGreen"
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="HTML"
+            TextColor="Black" />
+
+        <Label
+            Padding="0,10"
+            BackgroundColor="#5ebd78"
+            Text="O TextType esta definido como HTML! &lt;i&gt; Eu consigo usar tags do HTML! &lt;/i&gt;"
+            TextType="Html" />
+
+        <Label
+            Padding="0,10"
+            BackgroundColor="#5ebd78"
+            Text="Mas a maneira de cima é ruim, como resolver?"
+            TextColor="Black"
+            TextDecorations="Underline" />
+
+        <Label
+            Padding="0,10"
+            BackgroundColor="#5ebd78"
+            TextType="Html">
+            <Label.Text>
+                <![CDATA[
+                <i> Aqui dentro pode conter tags HTML! </i> <br> <strong> Entendeu? </strong>
+                ]]>
+            </Label.Text>
+        </Label>
+    </VerticalStackLayout>
+</ContentPage>
