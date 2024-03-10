@@ -1,41 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppJogoDaForca.MainPage">
+<ContentPage
+    x:Class="AppJogoDaForca.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <FlexLayout Direction="Column" JustifyContent="SpaceBetween">
 
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Margin="0,20,0,0"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Source="forca1.png" />
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Text="[Dica]" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                FontSize="36"
+                HorizontalOptions="Center"
+                Text="A _ _ _ _ _ _ _ _ _" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <VerticalStackLayout>
 
-        </VerticalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="Center">
+
+                    <Button HorizontalOptions="Center" Text="Q" />
+                    <Button HorizontalOptions="Center" Text="W" />
+                    <Button HorizontalOptions="Center" Text="E" />
+                    <Button HorizontalOptions="Center" Text="R" />
+                    <Button HorizontalOptions="Center" Text="T" />
+                    <Button HorizontalOptions="Center" Text="Y" />
+                    <Button HorizontalOptions="Center" Text="U" />
+                    <Button HorizontalOptions="Center" Text="I" />
+                    <Button HorizontalOptions="Center" Text="O" />
+                    <Button HorizontalOptions="Center" Text="P" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+
+                    <Button HorizontalOptions="Center" Text="A" />
+                    <Button HorizontalOptions="Center" Text="S" />
+                    <Button HorizontalOptions="Center" Text="D" />
+                    <Button HorizontalOptions="Center" Text="F" />
+                    <Button HorizontalOptions="Center" Text="G" />
+                    <Button HorizontalOptions="Center" Text="H" />
+                    <Button HorizontalOptions="Center" Text="J" />
+                    <Button HorizontalOptions="Center" Text="K" />
+                    <Button HorizontalOptions="Center" Text="L" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="0,0,0,10" HorizontalOptions="Center">
+
+                    <Button HorizontalOptions="Center" Text="Z" />
+                    <Button HorizontalOptions="Center" Text="X" />
+                    <Button HorizontalOptions="Center" Text="C" />
+                    <Button HorizontalOptions="Center" Text="V" />
+                    <Button HorizontalOptions="Center" Text="B" />
+                    <Button HorizontalOptions="Center" Text="N" />
+                    <Button HorizontalOptions="Center" Text="M" />
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+        </FlexLayout>
     </ScrollView>
 
 </ContentPage>
