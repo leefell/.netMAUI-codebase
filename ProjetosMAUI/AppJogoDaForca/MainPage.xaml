@@ -23,9 +23,9 @@
                 HorizontalOptions="Center"
                 Text="A _ _ _ _ _ _ _ _ _" />
 
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="3">
 
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="3">
 
                     <Button HorizontalOptions="Center" Text="Q" />
                     <Button HorizontalOptions="Center" Text="W" />
@@ -40,7 +40,7 @@
 
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="3">
 
                     <Button HorizontalOptions="Center" Text="A" />
                     <Button HorizontalOptions="Center" Text="S" />
@@ -54,7 +54,10 @@
 
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout Margin="0,0,0,10" HorizontalOptions="Center">
+                <HorizontalStackLayout
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Center"
+                    Spacing="3">
 
                     <Button HorizontalOptions="Center" Text="Z" />
                     <Button HorizontalOptions="Center" Text="X" />
