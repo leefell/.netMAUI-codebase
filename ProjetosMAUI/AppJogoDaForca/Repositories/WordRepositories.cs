@@ -14,42 +14,41 @@ namespace AppJogoDaForca.Repositories
         public WordRepositories()
         {
             _words = new List<Word>();
-            _words.Add(new Word("Nome", "Maria"));
-            _words.Add(new Word("Vegetal", "Cenoura"));
-            _words.Add(new Word("Fruta", "Abacate"));
-            _words.Add(new Word("Animal", "Gato"));
-            _words.Add(new Word("País", "Brasil"));
-            _words.Add(new Word("Cor", "Azul"));
-            _words.Add(new Word("Profissão", "Medico"));
-            _words.Add(new Word("Esporte", "Futebol"));
-            _words.Add(new Word("Comida", "Pizza"));
-            _words.Add(new Word("Instrumento Musical", "Violino"));
-            _words.Add(new Word("Sobremesa", "Sorvete"));
-            _words.Add(new Word("Filme", "Matrix"));
-            _words.Add(new Word("Idioma", "Ingles"));
-            _words.Add(new Word("Cidade", "Paris"));
-            _words.Add(new Word("Personagem de Desenho", "Mickey"));
-            _words.Add(new Word("Marca de Carro", "Toyota"));
-            _words.Add(new Word("Planta", "Rosa"));
-            _words.Add(new Word("Bebida", "Cafe"));
-            _words.Add(new Word("Profissão", "Advogado"));
-            _words.Add(new Word("Planeta", "Marte"));
-            _words.Add(new Word("Animal", "Elefante"));
-            _words.Add(new Word("País", "Japao"));
-            _words.Add(new Word("Cor", "Verde"));
-            _words.Add(new Word("Esporte", "Basquete"));
-            _words.Add(new Word("Comida", "Hamburger"));
-            _words.Add(new Word("Instrumento Musical", "Piano"));
-            _words.Add(new Word("Sobremesa", "Brigadeiro"));
-            _words.Add(new Word("Filme", "Titanic"));
-            _words.Add(new Word("Idioma", "Espanhol"));
-            _words.Add(new Word("Cidade", "Nova York"));
-            _words.Add(new Word("Personagem de Desenho", "Bob Esponja"));
-            _words.Add(new Word("Marca de Carro", "Ford"));
-            _words.Add(new Word("Planta", "Girassol"));
-            _words.Add(new Word("Bebida", "Refrigerante"));
-            _words.Add(new Word("Planeta", "Saturno"));
-
+            _words.Add(new Word("Nome", "Maria".ToUpper()));
+            _words.Add(new Word("Vegetal", "Cenoura".ToUpper()));
+            _words.Add(new Word("Fruta", "Abacate".ToUpper()));
+            _words.Add(new Word("Animal", "Gato".ToUpper()));
+            _words.Add(new Word("País", "Brasil".ToUpper()));
+            _words.Add(new Word("Cor", "Azul".ToUpper()));
+            _words.Add(new Word("Profissão", "Medico".ToUpper()));
+            _words.Add(new Word("Esporte", "Futebol".ToUpper()));
+            _words.Add(new Word("Comida", "Pizza".ToUpper()));
+            _words.Add(new Word("Instrumento Musical", "Violino".ToUpper()));
+            _words.Add(new Word("Sobremesa", "Sorvete".ToUpper()));
+            _words.Add(new Word("Filme", "Matrix".ToUpper()));
+            _words.Add(new Word("Idioma", "Ingles".ToUpper()));
+            _words.Add(new Word("Cidade", "Paris".ToUpper()));
+            _words.Add(new Word("Personagem de Desenho", "Mickey".ToUpper()));
+            _words.Add(new Word("Marca de Carro", "Toyota".ToUpper()));
+            _words.Add(new Word("Planta", "Rosa".ToUpper()));
+            _words.Add(new Word("Bebida", "Cafe".ToUpper()));
+            _words.Add(new Word("Profissão", "Advogado".ToUpper()));
+            _words.Add(new Word("Planeta", "Marte".ToUpper()));
+            _words.Add(new Word("Animal", "Elefante".ToUpper()));
+            _words.Add(new Word("País", "Japao".ToUpper()));
+            _words.Add(new Word("Cor", "Verde".ToUpper()));
+            _words.Add(new Word("Esporte", "Basquete".ToUpper()));
+            _words.Add(new Word("Comida", "Hamburger".ToUpper()));
+            _words.Add(new Word("Instrumento Musical", "Piano".ToUpper()));
+            _words.Add(new Word("Sobremesa", "Brigadeiro".ToUpper()));
+            _words.Add(new Word("Filme", "Titanic".ToUpper()));
+            _words.Add(new Word("Idioma", "Espanhol".ToUpper()));
+            _words.Add(new Word("Cidade", "Nova York".ToUpper()));
+            _words.Add(new Word("Personagem de Desenho", "Bob Esponja".ToUpper()));
+            _words.Add(new Word("Marca de Carro", "Ford".ToUpper()));
+            _words.Add(new Word("Planta", "Girassol".ToUpper()));
+            _words.Add(new Word("Bebida", "Refrigerante".ToUpper()));
+            _words.Add(new Word("Planeta", "Saturno".ToUpper()));
         }
 
         public Word GetRandomWord()
