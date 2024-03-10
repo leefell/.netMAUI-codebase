@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGallery.Views.Components.Mains.ImagePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ImagePage">
+    <VerticalStackLayout>
+
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span
+                        FontAttributes="Bold"
+                        FontSize="70"
+                        Text="PROCURADO      "
+                        TextColor="Red" />
+                    <Span
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Text="Viu esse índividuo? é um gato." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Image Aspect="AspectFill" Source="cat.png" />
+
+        <Label FontSize="Micro" Text="Foi visto próximo à MERIDIANO - SP, autoridades locais advertem cidadãos para trancarem suas casas à partir das 18 Horas e apagarem todas as Luzes." />
+
+        <Image
+            IsAnimationPlaying="True"
+            IsOpaque="True"
+            Source="dotnet_bot.png" />
+
+    </VerticalStackLayout>
+</ContentPage>
