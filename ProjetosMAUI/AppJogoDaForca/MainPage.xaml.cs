@@ -16,18 +16,19 @@ namespace AppJogoDaForca
         }
         private async void OnButtonClicked(object sender, EventArgs e)
         {
-            ((Button)sender).IsEnabled = false; // se o usuario errar uma vez, ele n vai poder errar na mesma letra novamente
+            Button button = ((Button)sender);
+            button.IsEnabled = false; // se o usuario errar uma vez, ele n vai poder errar na mesma letra novamente
 
-            String letter = ((Button)sender).Text; // armazena a letra que foi clicada
+            String letter = button.Text; // armazena a letra que foi clicada
 
             var positions = _word.Text.GetPositions(letter);
 
             if(positions.Count == 0)
             {
                 _errors++;
-
                 ImgMain.Source = ImageSource.FromFile($"forca{_errors + 1}.png"); // conforme o user for errando, vai trocando as imagens, forca1, forca2
-
+                button.Style = App.Current.Resources.MergedDictionaries.ElementAt(1)["Failure"] as Style; // cheque o App.xaml e essa linha fara sentido
+ 
                 if(_errors == 6)
                 {
                     bool continuePlaying = await DisplayAlert("Fim de Jogo!", "Você perdeu!", "Novo Jogo", "Sair");
@@ -46,6 +47,7 @@ namespace AppJogoDaForca
                 {
                     LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
                 }
+                button.Style = App.Current.Resources.MergedDictionaries.ElementAt(1)["Sucess"] as Style;
             }
 
         }
@@ -81,6 +83,7 @@ namespace AppJogoDaForca
             foreach(Button button in horizontal.Children) // cada filho é um botão
             {
                 button.IsEnabled = true;
+                button.Style = null;
             }
         }
     }
