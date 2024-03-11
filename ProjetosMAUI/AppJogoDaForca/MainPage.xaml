@@ -33,9 +33,12 @@
                 HorizontalOptions="Center"
                 Text="" />
 
-            <VerticalStackLayout x:Name="KeyboardContainer" Spacing="3">
+            <VerticalStackLayout x:Name="KeyboardContainer" Spacing="7">
 
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="3">
+                <HorizontalStackLayout
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Spacing="3">
 
                     <Button
                         Clicked="OnButtonClicked"
@@ -80,7 +83,10 @@
 
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="3">
+                <HorizontalStackLayout
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Spacing="3">
 
                     <Button
                         Clicked="OnButtonClicked"
@@ -123,6 +129,7 @@
 
                 <HorizontalStackLayout
                     Margin="0,0,0,10"
+                    HeightRequest="40"
                     HorizontalOptions="Center"
                     Spacing="3">
 
