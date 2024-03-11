@@ -12,13 +12,9 @@ namespace AppJogoDaForca
         {
             InitializeComponent();
 
-            var repository = new WordRepositories();
-            _word = repository.GetRandomWord();
-
-            LblTips.Text = _word.Tips;
-            LblText.Text = new string('_', _word.Text.Length); // ve a quantidade de caracteres de uma string e substitui por _
+            ResetScreen();
         }
-        private void OnButtonClicked(object sender, EventArgs e)
+        private async void OnButtonClicked(object sender, EventArgs e)
         {
             ((Button)sender).IsEnabled = false; // se o usuario errar uma vez, ele n vai poder errar na mesma letra novamente
 
@@ -29,12 +25,62 @@ namespace AppJogoDaForca
             if(positions.Count == 0)
             {
                 _errors++;
-                return; 
+
+                ImgMain.Source = ImageSource.FromFile($"forca{_errors + 1}.png"); // conforme o user for errando, vai trocando as imagens, forca1, forca2
+
+                if(_errors == 6)
+                {
+                    bool continuePlaying = await DisplayAlert("Fim de Jogo!", "Você perdeu!", "Novo Jogo", "Sair");
+
+                    if (continuePlaying)
+                        ResetScreen();
+                    else
+                        App.Current.Quit();
+                }
+
+                return;
+            }
+            else
+            {
+                foreach(int position in positions)
+                {
+                    LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
+                }
             }
 
-            foreach(int position in positions)
+        }
+        private void ResetScreen()
+        {
+            ResetVirtualKeyBoard();
+            ResetErrors();
+            SortNewWord();
+        }
+        private void SortNewWord()
+        {
+            var repository = new WordRepositories();
+            _word = repository.GetRandomWord();
+
+            LblTips.Text = _word.Tips;
+            LblText.Text = new string('_', _word.Text.Length); // ve a quantidade de caracteres de uma string e substitui por _
+        }
+        private void ResetErrors()
+        {
+            _errors = 0;
+            ImgMain.Source = ImageSource.FromFile("forca1.png");
+        }
+
+        private void ResetVirtualKeyBoard()
+        {
+            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[0]); // reseta a primeira fileira de letras
+            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[1]); // reseta a segunda fileira de letras
+            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[2]); // reseta a terceira fileira de letras
+        }
+
+        private void ResetVirtualLines(HorizontalStackLayout horizontal)
+        {
+            foreach(Button button in horizontal.Children) // cada filho é um botão
             {
-                LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
+                button.IsEnabled = true;
             }
         }
     }
