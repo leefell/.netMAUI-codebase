@@ -1,9 +1,4 @@
 ﻿using AppJogoDaForca.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppJogoDaForca.Repositories
 {
@@ -15,6 +10,10 @@ namespace AppJogoDaForca.Repositories
         {
             _words = new List<Word>();
             _words.Add(new Word("Nome", "Maria".ToUpper()));
+            _words.Add(new Word("Profissão", "Engenheiro".ToUpper()));
+            _words.Add(new Word("Profissão", "Pedreiro".ToUpper()));
+            _words.Add(new Word("Profissão", "Cabeleireiro".ToUpper()));
+            _words.Add(new Word("Profissão", "Policial".ToUpper()));
             _words.Add(new Word("Vegetal", "Cenoura".ToUpper()));
             _words.Add(new Word("Fruta", "Abacate".ToUpper()));
             _words.Add(new Word("Animal", "Gato".ToUpper()));
@@ -49,6 +48,40 @@ namespace AppJogoDaForca.Repositories
             _words.Add(new Word("Planta", "Girassol".ToUpper()));
             _words.Add(new Word("Bebida", "Refrigerante".ToUpper()));
             _words.Add(new Word("Planeta", "Saturno".ToUpper()));
+            _words.Add(new Word("Profissão", "Professor".ToUpper()));
+            _words.Add(new Word("Profissão", "Programador".ToUpper()));
+            _words.Add(new Word("Profissão", "Arquiteto".ToUpper()));
+            _words.Add(new Word("Profissão", "Designer".ToUpper()));
+            _words.Add(new Word("Profissão", "Chef de cozinha".ToUpper()));
+            _words.Add(new Word("Profissão", "Piloto".ToUpper()));
+            _words.Add(new Word("Profissão", "Jornalista".ToUpper()));
+            _words.Add(new Word("Profissão", "Bombeiro".ToUpper()));
+            _words.Add(new Word("Profissão", "Fotógrafo".ToUpper()));
+            _words.Add(new Word("Profissão", "Artista".ToUpper()));
+            _words.Add(new Word("Hobby", "Pintura".ToUpper()));
+            _words.Add(new Word("Hobby", "Danca".ToUpper()));
+            _words.Add(new Word("Hobby", "Caminhada".ToUpper()));
+            _words.Add(new Word("Hobby", "Fotografia".ToUpper()));
+            _words.Add(new Word("Hobby", "Leitura".ToUpper()));
+            _words.Add(new Word("Hobby", "Cozinhar".ToUpper()));
+            _words.Add(new Word("Hobby", "Jardinagem".ToUpper()));
+            _words.Add(new Word("Hobby", "Musica".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Bicicleta".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Aviao".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Navio".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Caminhao".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Helicoptero".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Trem".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Onibus".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Carro".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Martelo".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Chave de fenda".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Serra".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Alicate".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Broca".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Lixa".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Serrote".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Trena".ToUpper()));
         }
 
         public Word GetRandomWord()

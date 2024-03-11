@@ -1,6 +1,7 @@
 ﻿using AppJogoDaForca.Models;
 using AppJogoDaForca.Repositories;
 using AppJogoDaForca.Libraries.Text;
+using System.Text;
 
 namespace AppJogoDaForca
 {
@@ -74,7 +75,7 @@ namespace AppJogoDaForca
         {
             if (_errors == 6) // Verifica se o jogador perdeu
             {
-                bool continuePlaying = await DisplayAlert("Fim de Jogo!", "Você perdeu!", "Novo Jogo", "Sair");
+                bool continuePlaying = await DisplayAlert("Fim de Jogo!", $"Você perdeu! A resposta era: {_word.Text}", "Novo Jogo", "Sair");
                 if (continuePlaying)
                     ResetScreen();
                 else
@@ -98,7 +99,17 @@ namespace AppJogoDaForca
             _word = repository.GetRandomWord();
 
             LblTips.Text = _word.Tips;
-            LblText.Text = new string('_', _word.Text.Length); // Esconde as letras da palavra
+            // LblText.Text = new string('_', _word.Text.Length); // velho
+
+            StringBuilder hiddenWord = new StringBuilder(); // logica de underscore refatorada para nao colocar underline em espaços da palavra
+            foreach(char c in _word.Text)
+            {
+                if (char.IsLetter(c))
+                    hiddenWord.Append('_');
+                else
+                    hiddenWord.Append(c);
+            }
+            LblText.Text = hiddenWord.ToString();
         }
 
         private void ResetErrors()
