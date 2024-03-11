@@ -8,83 +8,125 @@ namespace AppJogoDaForca
     {
         private Word _word;
         private int _errors = 0;
+        private Style _successStyle; // Armazena o estilo de sucesso para reutilização
+
         public MainPage()
         {
             InitializeComponent();
-
+            _successStyle = (Style)App.Current.Resources.MergedDictionaries.ElementAt(1)["Sucess"]; // Recupera o estilo de sucesso uma vez
             ResetScreen();
         }
+
         private async void OnButtonClicked(object sender, EventArgs e)
         {
-            Button button = ((Button)sender);
-            button.IsEnabled = false; // se o usuario errar uma vez, ele n vai poder errar na mesma letra novamente
+            Button button = (Button)sender;
+            button.IsEnabled = false; // o usuário não pode clicar na mesma letra novamente
 
-            String letter = button.Text; // armazena a letra que foi clicada
+            string letter = button.Text; // armazena a letra que foi clicada
 
             var positions = _word.Text.GetPositions(letter);
 
-            if(positions.Count == 0)
+            if (positions.Count == 0)
             {
-                _errors++;
-                ImgMain.Source = ImageSource.FromFile($"forca{_errors + 1}.png"); // conforme o user for errando, vai trocando as imagens, forca1, forca2
-                button.Style = App.Current.Resources.MergedDictionaries.ElementAt(1)["Failure"] as Style; // cheque o App.xaml e essa linha fara sentido
- 
-                if(_errors == 6)
-                {
-                    bool continuePlaying = await DisplayAlert("Fim de Jogo!", "Você perdeu!", "Novo Jogo", "Sair");
-
-                    if (continuePlaying)
-                        ResetScreen();
-                    else
-                        App.Current.Quit();
-                }
-
-                return;
+                ErrorHandler(button);
+                await CheckGameOver();
             }
             else
             {
-                foreach(int position in positions)
-                {
-                    LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
-                }
-                button.Style = App.Current.Resources.MergedDictionaries.ElementAt(1)["Sucess"] as Style;
+                ReplaceLetter(letter, positions);
+                button.Style = _successStyle; // Aplica o estilo de sucesso
+                await CheckWinner(); // Verifica se o jogador ganhou
             }
-
         }
+
+        #region Handlers
+        private void ReplaceLetter(string letter, List<int> positions)
+        {
+            foreach (int position in positions)
+            {
+                LblText.Text = LblText.Text.Remove(position, 1).Insert(position, letter);
+            }
+        }
+
+        private void ErrorHandler(Button button)
+        {
+            _errors++;
+            ImgMain.Source = ImageSource.FromFile($"forca{_errors + 1}.png"); // Troca a imagem conforme o usuário erra
+            button.Style = (Style)App.Current.Resources.MergedDictionaries.ElementAt(1)["Failure"]; // Aplica o estilo de falha
+        }
+
+        #endregion
+
+        #region VerifyConditions
+        private async Task CheckWinner()
+        {
+            if (!LblText.Text.Contains("_") && _errors < 6) // Verifica se todas as letras foram adivinhadas e se o jogador não perdeu ainda
+            {
+                bool continuePlaying = await DisplayAlert("Parabéns!", "Você venceu!", "Novo Jogo", "Sair");
+                if (continuePlaying)
+                    ResetScreen();
+                else
+                    App.Current.Quit();
+            }
+        }
+
+        private async Task CheckGameOver()
+        {
+            if (_errors == 6) // Verifica se o jogador perdeu
+            {
+                bool continuePlaying = await DisplayAlert("Fim de Jogo!", "Você perdeu!", "Novo Jogo", "Sair");
+                if (continuePlaying)
+                    ResetScreen();
+                else
+                    App.Current.Quit();
+            }
+        }
+
+        #endregion
+
+        #region ResetScreen - Revert screen to initial state
         private void ResetScreen()
         {
             ResetVirtualKeyBoard();
             ResetErrors();
             SortNewWord();
         }
+
         private void SortNewWord()
         {
             var repository = new WordRepositories();
             _word = repository.GetRandomWord();
 
             LblTips.Text = _word.Tips;
-            LblText.Text = new string('_', _word.Text.Length); // ve a quantidade de caracteres de uma string e substitui por _
+            LblText.Text = new string('_', _word.Text.Length); // Esconde as letras da palavra
         }
+
         private void ResetErrors()
         {
             _errors = 0;
-            ImgMain.Source = ImageSource.FromFile("forca1.png");
+            ImgMain.Source = ImageSource.FromFile("forca1.png"); // Reinicia a imagem
         }
 
         private void ResetVirtualKeyBoard()
         {
-            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[0]); // reseta a primeira fileira de letras
-            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[1]); // reseta a segunda fileira de letras
-            ResetVirtualLines((HorizontalStackLayout)KeyboardContainer.Children[2]); // reseta a terceira fileira de letras
-        }
-
-        private void ResetVirtualLines(HorizontalStackLayout horizontal)
-        {
-            foreach(Button button in horizontal.Children) // cada filho é um botão
+            foreach (var child in KeyboardContainer.Children)
             {
-                button.IsEnabled = true;
-                button.Style = null;
+                if (child is HorizontalStackLayout horizontal)
+                {
+                    foreach (Button button in horizontal.Children) // Reseta todos os botões do teclado
+                    {
+                        button.IsEnabled = true;
+                        button.Style = null;
+                    }
+                }
             }
         }
+
+        private void OnButtonClickedResetGame(object sender, EventArgs e)
+        {
+            ResetScreen();
+        }
+
+        #endregion
     }
 }

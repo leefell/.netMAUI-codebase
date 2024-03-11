@@ -7,6 +7,12 @@
     <ScrollView>
         <FlexLayout Direction="Column" JustifyContent="SpaceBetween">
 
+            <Button
+                Margin="0,15,0,0"
+                Clicked="OnButtonClickedResetGame"
+                HorizontalOptions="Center"
+                Text="Reiniciar" />
+
             <Image
                 x:Name="ImgMain"
                 Margin="0,20,0,0"
