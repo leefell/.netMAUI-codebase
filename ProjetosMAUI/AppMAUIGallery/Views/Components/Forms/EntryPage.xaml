@@ -46,6 +46,19 @@
             PlaceholderColor="Gray"
             SelectionLength="5" />
 
+        <Label
+            HorizontalOptions="Start"
+            Text="Campo de Teste"
+            VerticalOptions="Center" />
+
+        <Entry
+            ClearButtonVisibility="WhileEditing"
+            Completed="Entry_Completed"
+            Placeholder="Escreva algo aqui!"
+            TextChanged="Entry_TextChanged" />
+
+        <Label x:Name="LblText" />
+
         <Image
             HorizontalOptions="Center"
             MaximumHeightRequest="300"
