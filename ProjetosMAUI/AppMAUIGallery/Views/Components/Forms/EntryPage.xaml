@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMAUIGallery.Views.Components.Forms.EntryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="EntryPage">
+    <VerticalStackLayout Padding="10">
+        <Label
+            HorizontalOptions="Start"
+            Text="Digite seu nome: "
+            VerticalOptions="Center" />
+
+        <Entry
+            ClearButtonVisibility="WhileEditing"
+            HeightRequest="50"
+            HorizontalTextAlignment="Start"
+            IsSpellCheckEnabled="True"
+            IsTextPredictionEnabled="True"
+            Keyboard="Telephone"
+            MaxLength="100"
+            Placeholder="Nome"
+            PlaceholderColor="Gray"
+            TextColor="Green" />
+
+        <Label
+            HorizontalOptions="Start"
+            Text="Digite Sua idade: "
+            VerticalOptions="Center" />
+
+        <Entry
+            Keyboard="Numeric"
+            MaxLength="3"
+            PlaceholderColor="Gray"
+            ReturnType="Next" />
+
+        <Label
+            HorizontalOptions="Start"
+            Text="Digite sua senha: "
+            VerticalOptions="Center" />
+
+        <Entry
+            ClearButtonVisibility="WhileEditing"
+            CursorPosition="3"
+            IsPassword="True"
+            Placeholder="Senha "
+            PlaceholderColor="Gray"
+            SelectionLength="5" />
+
+        <Image
+            HorizontalOptions="Center"
+            MaximumHeightRequest="300"
+            MaximumWidthRequest="500"
+            Source="cat.png"
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
