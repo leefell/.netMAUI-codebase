@@ -119,9 +119,21 @@ namespace AppMAUIGallery.Repositories
                         Title = "Entry",
                         Description = "Cria uma caixa de entrada de texto.",
                         Page = typeof(EntryPage)
+                    },
+                    new Component
+                    {
+                        Title = "Editor",
+                        Description = "Cria uma caixa de entrada de texto de multiplas linhas.",
+                        Page = typeof(EditorPage)
+                    },
+                    new Component
+                    {
+                        Title = "CheckBox",
+                        Description = "Cria uma caixa de marcação.",
+                        Page = typeof(CheckBoxPage)
                     }
                 }
-            }); ;
+            });
             return categories;
         }
     }

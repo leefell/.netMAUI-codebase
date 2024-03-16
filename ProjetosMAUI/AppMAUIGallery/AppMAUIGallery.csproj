@@ -51,6 +51,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\Components\Forms\CheckBox.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Views\Components\Forms\CheckBox.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\Ojuju-VariableFont_wght.ttf" />
 	  <None Remove="Resources\Images\cat.svg" />
 	  <None Remove="Resources\Images\poweroff.png" />
@@ -63,6 +71,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="AppFlyout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Components\Forms\CheckBoxPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Components\Forms\EditorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Components\Forms\EntryPage.xaml">

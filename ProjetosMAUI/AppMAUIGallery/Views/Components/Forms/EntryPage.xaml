@@ -54,6 +54,7 @@
         <Entry
             ClearButtonVisibility="WhileEditing"
             Completed="Entry_Completed"
+            IsReadOnly="False"
             Placeholder="Escreva algo aqui!"
             TextChanged="Entry_TextChanged" />
 
