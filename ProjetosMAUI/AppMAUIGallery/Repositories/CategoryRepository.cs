@@ -137,6 +137,12 @@ namespace AppMAUIGallery.Repositories
                         Title = "RadioButton",
                         Description = "Cria uma caixa de marcação de escolha única.",
                         Page = typeof(RadioButtonPage)
+                    },
+                    new Component
+                    {
+                        Title = "Switch",
+                        Description = "Caixa de marcação booleana.",
+                        Page = typeof(SwitchPage)
                     }
                 }
             }); 
