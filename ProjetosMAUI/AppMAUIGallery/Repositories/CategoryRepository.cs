@@ -155,6 +155,30 @@ namespace AppMAUIGallery.Repositories
                         Title = "Slider",
                         Description = "Cria barra que incrementa ou decrementa um número.",
                         Page = typeof(SliderPage)
+                    },
+                    new Component
+                    {
+                        Title = "TimePicker",
+                        Description = "Permite a seleção da hora e do minuto.",
+                        Page = typeof(TimePickerPage)
+                    },
+                    new Component
+                    {
+                        Title = "DatePickeer",
+                        Description = "Permite a seleção de data.",
+                        Page = typeof(DatePickerPage)
+                    },
+                    new Component
+                    {
+                        Title = "SearchBar",
+                        Description = "Campo de entrada de texto para pesquisa.",
+                        Page = typeof(SearchBarPage)
+                    },
+                    new Component
+                    {
+                        Title = "Picker",
+                        Description = "Seleciona um item de uma lista.",
+                        Page = typeof(PickerPage)
                     }
                 }
             }); 
