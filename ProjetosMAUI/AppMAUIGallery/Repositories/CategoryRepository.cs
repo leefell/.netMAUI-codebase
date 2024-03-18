@@ -143,6 +143,12 @@ namespace AppMAUIGallery.Repositories
                         Title = "Switch",
                         Description = "Caixa de marcação booleana.",
                         Page = typeof(SwitchPage)
+                    },
+                    new Component
+                    {
+                        Title = "Stepper",
+                        Description = "Cria opções de incrementar ou decrementar um número.",
+                        Page = typeof(StepperPage)
                     }
                 }
             }); 
