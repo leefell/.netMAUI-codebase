@@ -4,6 +4,7 @@ using AppMAUIGallery.Views.Components.Forms;
 using AppMAUIGallery.Views.Components.Mains;
 using AppMAUIGallery.Views.Components.Visuals;
 using AppMAUIGallery.Views.Layouts;
+using AppMAUIGallery.Views.Lists;
 
 namespace AppMAUIGallery.Repositories
 {
@@ -217,6 +218,25 @@ namespace AppMAUIGallery.Repositories
                         Title = "ViewCell",
                         Description = "Permite criar a célula com layout personalizado.",
                         Page = typeof(ViewCellPage)
+                    },
+                }
+            });
+            categories.Add(new Category
+            {
+                Name = "Listas e Coleções",
+                Components = new List<Component>
+                {
+                    new Component
+                    {
+                        Title = "TableView",
+                        Description = "Apresenta células em linhas separadas e permite agrupar por seção.",
+                        Page = typeof(TableViewPage)
+                    },
+                    new Component
+                    {
+                        Title = "Picker",
+                        Description = "Apresenta uma lista de seleção única.",
+                        Page = typeof(PickerListPage)
                     },
                 }
             });
