@@ -1,4 +1,5 @@
 ﻿using AppMAUIGallery.Models;
+using AppMAUIGallery.Views.Cells;
 using AppMAUIGallery.Views.Components.Forms;
 using AppMAUIGallery.Views.Components.Mains;
 using AppMAUIGallery.Views.Components.Visuals;
@@ -181,7 +182,44 @@ namespace AppMAUIGallery.Repositories
                         Page = typeof(PickerPage)
                     }
                 }
-            }); 
+            });
+            categories.Add(new Category
+            {
+                Name = "Células",
+                Components = new List<Component>
+                {
+                    new Component
+                    {
+                        Title = "TextCell",
+                        Description = "Apresenta até duas labels onde uma é destinada ao título e outra a descrição.",
+                        Page = typeof(TextCellPage)
+                    },
+                    new Component
+                    {
+                        Title = "ImageCell",
+                        Description = "Apresenta uma imagem com duas labels onde uma é destinada ao título e outra a descrição.",
+                        Page = typeof(ImageCellPage)
+                    },
+                    new Component
+                    {
+                        Title = "SwitchCell",
+                        Description = "Apresenta uma label em conjunto com um switch.",
+                        Page = typeof(SwitchCellPage)
+                    },
+                    new Component
+                    {
+                        Title = "EntryCell",
+                        Description = "Apresenta uma label em conjunto com um Entry.",
+                        Page = typeof(EntryCellPage)
+                    },
+                    new Component
+                    {
+                        Title = "ViewCell",
+                        Description = "Permite criar a célula com layout personalizado.",
+                        Page = typeof(ViewCellPage)
+                    },
+                }
+            });
             return categories;
         }
     }
