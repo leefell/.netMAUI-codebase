@@ -238,6 +238,12 @@ namespace AppMAUIGallery.Repositories
                         Description = "Apresenta uma lista de seleção única.",
                         Page = typeof(PickerListPage)
                     },
+                    new Component
+                    {
+                        Title = "ListView",
+                        Description = "Apresenta uma lista de itens.",
+                        Page = typeof(ListViewPage)
+                    },
                 }
             });
             return categories;
