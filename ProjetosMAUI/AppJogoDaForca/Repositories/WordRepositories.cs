@@ -82,6 +82,35 @@ namespace AppJogoDaForca.Repositories
             _words.Add(new Word("Ferramenta", "Lixa".ToUpper()));
             _words.Add(new Word("Ferramenta", "Serrote".ToUpper()));
             _words.Add(new Word("Ferramenta", "Trena".ToUpper()));
+            _words.Add(new Word("Hobby", "Viagem".ToUpper()));
+            _words.Add(new Word("Hobby", "Surfe".ToUpper()));
+            _words.Add(new Word("Hobby", "Artesanato".ToUpper()));
+            _words.Add(new Word("Hobby", "Yoga".ToUpper()));
+            _words.Add(new Word("Hobby", "Ciclismo".ToUpper()));
+            _words.Add(new Word("Hobby", "Escalada".ToUpper()));
+            _words.Add(new Word("Hobby", "Pesca".ToUpper()));
+            _words.Add(new Word("Hobby", "Escrita".ToUpper()));
+            _words.Add(new Word("Hobby", "Costura".ToUpper()));
+            _words.Add(new Word("Hobby", "Jogos de Tabuleiro".ToUpper()));
+            _words.Add(new Word("Hobby", "Jogos de Cartas".ToUpper()));
+            _words.Add(new Word("Hobby", "Programação".ToUpper()));
+            _words.Add(new Word("Hobby", "Teatro".ToUpper()));
+            _words.Add(new Word("Hobby", "Desenho".ToUpper()));
+            _words.Add(new Word("Hobby", "Fotografia".ToUpper()));
+            _words.Add(new Word("Hobby", "Meditar".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Moto".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Barco".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Canoa".ToUpper()));
+            _words.Add(new Word("Meio de Transporte", "Jet ski".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Tesoura".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Furadeira".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Plaina".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Chave inglesa".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Marreta".ToUpper()));
+            _words.Add(new Word("Ferramenta", "Trena a laser".ToUpper()));
+            _words.Add(new Word("Cor", "Cinza".ToUpper()));
+            _words.Add(new Word("Acessório", "Pulseira".ToUpper()));
+            _words.Add(new Word("Acessório", "Relogio".ToUpper()));
         }
 
         public Word GetRandomWord()
